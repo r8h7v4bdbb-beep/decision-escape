@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Decision Escape</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 40px;
+    }
+    .card {
+      background: #222;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 420px;
+      margin: auto;
+    }
+    button {
+      padding: 12px 18px;
+      border: none;
+      border-radius: 8px;
+      background: #ff4d4d;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    select {
+      padding: 10px;
+      width: 100%;
+      margin-top: 10px;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎮 Decision Escape</h1>
+  <p>결정장애를 탈출하자</p>
+
+  <div class="card">
+    <h2>🍽 오늘 점심 뭐 먹지?</h2>
+
+    <select id="menu">
+      <option>김치볶음밥</option>
+      <option>제육덮밥</option>
+      <option>돈까스</option>
+      <option>냉면</option>
+      <option>마라탕</option>
+    </select>
+
+    <button onclick="decide()">결정 완료</button>
+
+    <h3 id="result"></h3>
+  </div>
+
+  <script>
+    function decide() {
+      const menu = document.getElementById("menu").value;
+      document.getElementById("result").innerText =
+        "👉 오늘의 선택: " + menu;
+    }
+  </script>
+
+</body>
+</html>
