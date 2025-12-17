@@ -58,12 +58,19 @@
   </div>
 
   <script>
-    function decide() {
-      const menu = document.getElementById("menu").value;
-      document.getElementById("result").innerText =
-        "👉 오늘의 선택: " + menu;
-    }
-  </script>
+  function decide() {
+    const menus = [
+      "김치볶음밥",
+      "제육덮밥",
+      "돈까스",
+      "냉면",
+      "마라탕"
+    ];
 
-</body>
-</html>
+    const randomIndex = Math.floor(Math.random() * menus.length);
+    const choice = menus[randomIndex];
+
+    document.getElementById("result").innerText =
+      "👉 오늘의 선택: " + choice;
+  }
+</script>
